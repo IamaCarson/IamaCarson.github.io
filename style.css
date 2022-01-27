@@ -1,0 +1,24 @@
+body {
+  margin:0;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.top {
+  text-align:center;
+  text-decoration: underline;
+  color:white;
+  background:gray;
+  padding: 6vw;
+  
+}
+#titel {
+  font-size:5vw;
+}
+#splash {
+  font-size:3vw;
+  margin:-3vw;
+}
+
+.content {
+  text-align:center;
+  font-size:3vw;
+}
