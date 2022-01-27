@@ -1,7 +1,8 @@
-const splashList = ['beans', 'lmaop'];
+
+const splashList = ['2!', 'Oh boy!', 'American Cheese', 'Also try yugoslavia.best!', 'I <3 Videogames!'];
 
 function splash() {
-    t = document.getElementById('splash');
-    splashAmount = splashList.length;
-    t.innerHTML = splashList[Math.floor(Math.random()*splashAmount)];
+    document.getElementById('splash').innerText = splashList[Math.floor(Math.random()*splashList.length)];
 }
+
+window.onload = splash; //load splash
