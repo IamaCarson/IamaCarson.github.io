@@ -30,24 +30,21 @@ a.nav:hover{
 #titel {
   font-size:5vw;
 }
-
-.content {
-  text-align:center;
-  font-size:3vw;
-  background-color: white;
-}
-
-
-.top {
-  text-align:center;
-  color:white;
-  background:grey;
-  padding: 6vw;
-  
-}
-
 #splash {
   font-size:3vw;
   margin:-3vw;
 }
 
+.content {
+  text-align:center;
+  font-size:3vw;
+  
+}
+.list {
+  text-align:center;
+  font-size:3vw;
+  background-color: white;
+}
+.sublist {
+  font-size:1.8vw;
+}
