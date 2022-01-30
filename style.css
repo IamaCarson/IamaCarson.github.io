@@ -9,8 +9,8 @@ body {
 }
 img.nav {
   float: right;
-  width:3vw;
-  height:3vw;
+  width:25px;
+  height:25px;
 }
 a.nav{
   float: left;
