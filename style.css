@@ -1,13 +1,19 @@
 body {
   margin:0;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .nav{
   background-color: grey;
-  float: left;
+ 
   display: block;
 }
+img.nav {
+  float: right;
+  width:3vw;
+  height:3vw;
+}
 a.nav{
+  float: left;
   color: white;
   padding: 14px 25px;
   text-align: center;
