@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <!-- Noel -->
+  <head>
+    <!-- View Port for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Name -->
+    <title>:)</title>
+  </head>
+  <body>
+    <!-- Audio stuff -->
+    <audio controls autoplay>
+      <!-- Audio Source -->
+      <source src="noelspin.mp3" type="audio/mpeg">
+      <!-- Display If No Audio-->
+      Your browser does not support the audio element.
+    </audio>
+    <!-- Noel Image-->
+    <img src="noel.png" />
+  </body>
+  <!-- Styling because html is stupid-->
+  <style>
+      @keyframes example {
+        from  { transform: rotateY(0deg);}
+        to { transform: rotateY(360deg);}
+      }
+      img {
+          width:50vw;
+          height:50vw;
+          animation-name: example;
+          animation-duration: 1s;
+          position: relative;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+  </style>
+</html>

@@ -1,0 +1,185 @@
+/*target whole document*/
+html {
+  /* comic sans font */
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* body of html */
+body {
+  /* wrap elements to edge of browser */
+  margin:0;
+}
+
+/* nav */
+.nav{
+  /* background color */
+  background-color: grey;
+  /* block display */
+  display: block;
+}
+
+/* nav links */
+a.nav{
+  /* stack to left of screen */
+  float: left;
+  /* white text */
+  color: white;
+  /* size using vw */
+  padding: 1vw 2vw;
+  /* align text */
+  text-align: center;
+  /* no deco */
+  text-decoration: none;
+  /* dont newline */
+  display: inline-block;
+}
+
+/* if link normal */
+a.nav:link{
+  /* normal color */
+  background-color: grey;
+}
+
+/* if link hover */
+a.nav:hover{
+  /* hover color */
+  background-color: lightgrey;
+}
+
+/* switch button */
+a.switch {
+  /* stack to left of screen */
+  float: center;
+  /* white text */
+  color: white;
+  /* size using vw */
+  padding: 1vw 2vw;
+  /* align text */
+  text-align: center;
+  /* no deco */
+  text-decoration: none;
+}
+
+/* cheese world */
+img.nav {
+  /* float to right */
+  float: right;
+  /* width */
+  width:3w;
+  /* height */
+  height:3vw;
+}
+
+/* header */
+.top {
+  /* align text */
+  text-align:center;
+  /* white text color */
+  color:white;
+  /* grey background */
+  background:grey;
+  /* thickness */
+  padding: 3.7vw;
+}
+
+/* title/logo */
+#titel {
+  /* align to center */
+  text-align: center;
+  /* font size */
+  font-size:5vw;
+  /* No newline wrapping */
+  display: inline-block;
+}
+
+/* content under header */
+.content {
+  /* align center */
+  text-align:center;
+  /* font size */
+  font-size:3vw;
+  /* background color */
+  background-color: white;
+}
+
+/* splash text */
+#splash {
+  /* size of splash */
+  font-size:2vw;
+  /* margin */
+  margin:-3vw;
+  /* color */
+  color: yellow;
+}
+
+/* seal of nobody */
+#seal{
+  /* width */
+  width:7vw;
+  /* height */
+  height:7vw;
+  /* dont wrap newline */
+  display: block;
+}
+
+/* question in about page */
+.question {
+  font-size: 3vw;
+}
+
+/* answer to question */
+.answer {
+  font-size: 1.7vw;
+  white-space: nowrap;
+}
+
+/* list for gadgets */
+.list {
+  /* align text */
+  text-align:center;
+  /* font size */
+  font-size:3vw;
+  /* background color */
+  background-color: white;
+}
+
+/* sublist for gadgets */
+.sublist {
+  /* font size */
+  font-size:1.8vw;
+}
+
+/* seperator line */
+hr {
+  width:65%;
+}
+
+/* coin stats */
+.cstats {
+  font-size: 2vw;
+}
+
+h2.contacts {
+  padding: 0vw;
+  margin: 0vw;
+  font-size: 3vw;
+}
+p1.contacts {
+  padding: 0vw;
+  margin: 0vw;
+  font-size: 2vw;
+  float:inline-start;
+}
+
+.chang {
+  padding:0;
+  margin:0;
+  line-height: 1;
+  font-size: 2vw;
+}
+.chang1 {
+  padding:0;
+  margin:0;
+  line-height: 1;
+  font-size: 4vw;
+}

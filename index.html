@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <!-- Home Page -->
+  <head>
+    <!-- View Port for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <!-- Splashes -->
+    <script src="js/splashes.js"></script>
+    <!-- Name -->
+    <title>Carson's Gadgets</title>
+  </head>
+  <body>
+    <!-- Navigation class -->
+    <div class="nav">
+      <!-- Home Button -->
+      <a class="nav" href="index.html">Home</a>
+      <!-- Gadget List -->
+      <a class="nav" href="gadgets/gadgetlist.html">Gadgets</a>
+      <!-- About -->
+      <a class="nav" href="about/index.html">About</a>
+      <!-- What -->
+      <a class="nav" href="what/what.html">???</a>
+      <!-- Secret Noel Page -->
+      <a class="nav" href="noel/noel.html"></a>
+      <!-- Cheese World -->
+      <a href="cheeseworld/index.html"><img class="nav" src="images/ches.png" /></a>
+    </div>
+
+    <!-- Logo and splash -->
+    <div class="top">
+    <!-- Logo -->
+    <h1 id="titel"><span style="color: aqua;">[</span>Carson's Gadgets<span style="color: aqua;">]</span></h1>
+    <!-- Splash -->
+    </span><h2 onclick="splash(this);" id="splash" onload="splash(this);">...</h2>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Coming Soon -->
+      <a href="data/changelogs/0-1-0.html"><h1 id="soon">Update 0.1.0</h1></a>
+      <!-- Walter -->
+      <img class="dog" src="images/dohg.png" onclick="flip()"/><p1 id="counter" style="visibility: hidden;">1</p1>
+    </div>
+  </body>
+
+  <!-- Walter Flip-->
+  <style>
+    /* flip anim */
+    @keyframes flip {
+      from {
+        transform: rotateX(0deg);
+      }
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+    /* anim class */
+    .changing {
+      animation: flip 1s;
+    }    
+  </style>
+  <script>
+    //counter for dog clicks
+    let counter = 0;
+    //flip walter
+    function flip() {
+        document.getElementById("counter").style.visibility = "visible";
+        counter++;
+        document.getElementById("counter").innerText = counter;
+        document.querySelector(".dog").className = "dog";
+        window.requestAnimationFrame(function(time) {
+        window.requestAnimationFrame(function(time) {
+        document.querySelector(".dog").className = "dog changing";
+       //soon tm
+       // if(counter == 69){
+       //  document.getElementById("titel").innerText = password;
+       // }
+        });
+      });
+    }
+  </script>
+</html>
