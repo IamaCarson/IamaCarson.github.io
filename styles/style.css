@@ -46,6 +46,20 @@ a.nav:hover{
   background-color: lightgrey;
 }
 
+/* switch button */
+a.switch {
+  /* stack to left of screen */
+  float: center;
+  /* white text */
+  color: white;
+  /* size using vw */
+  padding: 1vw 2vw;
+  /* align text */
+  text-align: center;
+  /* no deco */
+  text-decoration: none;
+}
+
 /* cheese world */
 img.nav {
   /* float to right */
@@ -65,7 +79,7 @@ img.nav {
   /* grey background */
   background:grey;
   /* thickness */
-  padding: 5vw;
+  padding: 3.7vw;
 }
 
 /* title/logo */
@@ -91,19 +105,32 @@ img.nav {
 /* splash text */
 #splash {
   /* size of splash */
-  font-size:3vw;
+  font-size:2vw;
   /* margin */
   margin:-3vw;
+  /* color */
+  color: yellow;
 }
 
 /* seal of nobody */
 #seal{
   /* width */
-  width:4vw;
+  width:7vw;
   /* height */
-  height:4vw;
+  height:7vw;
   /* dont wrap newline */
-  display: inline-block;
+  display: block;
+}
+
+/* question in about page */
+.question {
+  font-size: 3vw;
+}
+
+/* answer to question */
+.answer {
+  font-size: 1.7vw;
+  white-space: nowrap;
 }
 
 /* list for gadgets */
@@ -120,4 +147,39 @@ img.nav {
 .sublist {
   /* font size */
   font-size:1.8vw;
+}
+
+/* seperator line */
+hr {
+  width:65%;
+}
+
+/* coin stats */
+.cstats {
+  font-size: 2vw;
+}
+
+h2.contacts {
+  padding: 0vw;
+  margin: 0vw;
+  font-size: 3vw;
+}
+p1.contacts {
+  padding: 0vw;
+  margin: 0vw;
+  font-size: 2vw;
+  float:inline-start;
+}
+
+.chang {
+  padding:0;
+  margin:0;
+  line-height: 1;
+  font-size: 2vw;
+}
+.chang1 {
+  padding:0;
+  margin:0;
+  line-height: 1;
+  font-size: 4vw;
 }
