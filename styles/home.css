@@ -1,0 +1,69 @@
+html {
+  height: 100%;
+}
+
+/*-------------------*/
+/*Cee class atributes*/
+/*-------------------*/
+
+/*Fade Out Animation*/
+@keyframes fadeOut {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+/*Fade In Animation*/
+@keyframes fadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/*fadeOut class*/
+.fade {
+  animation: fadeOut 1.0s forwards;
+}
+
+/*fadeIn class*/
+.fadeShow {
+  animation: fadeIn 1.0s forwards;
+}
+
+@keyframes rememberAnim {
+0% {
+    transform: rotate(0deg); 
+} 100% {
+  transform: rotate(360deg);
+}
+}
+
+@keyframes rememberAnim2 {
+  0% {
+      transform: rotate(0deg); 
+  } 100% {
+    transform: rotate(-360deg);
+  }
+  }
+/*fadeOut class*/
+.remember {
+  animation: rememberAnim 1.0s forwards;
+  
+}
+
+#arrow {
+
+  position: relative;
+  display: inline-block;
+}
+
+.remember2 {
+  animation: rememberAnim2 1.0s forwards;
+  
+}
+
+#arrow2 {
+
+  position: relative;
+  display: inline-block;
+}
+
+  

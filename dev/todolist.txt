@@ -1,0 +1,7 @@
+To DO List
+
+[x] Splash Screen
+[x] NotItg Projects
+[] Stocks Sim
+[] Coin Flip Sim
+[] Random Project Button with secrets
