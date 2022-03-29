@@ -26,10 +26,21 @@ const splashList = [
 '\"0/0\"',
 '\"Joe Biden\"'
 ];
+  
+const isToday = (someDate) => {
+    const today = new Date()
+    return someDate.getDate() == today.getDate() &&
+      someDate.getMonth() == today.getMonth()
+  }
 
-//splash function
+  //splash function
 function splash() {
-    document.getElementById('splash').innerText = splashList[Math.floor(Math.random()*splashList.length)];
+    if(isToday(new Date(0,2,29))){
+      document.getElementById('hero-splash-id').innerText = "Happy Birthday Taronuke!";
+    } else {
+    document.getElementById('hero-splash-id').innerText = splashList[Math.floor(Math.random()*splashList.length)];
+    }
 }
+
 
 window.onload = splash; //load splash
