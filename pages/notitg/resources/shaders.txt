@@ -1,0 +1,19 @@
+varying:
+vec3 position
+vec3 normal
+vec4 color
+vec2 textureCoord
+vec2 imageCoord
+
+uniform:
+float time
+float beat
+vec2 resolution
+vec2 textureSize
+vec2 imageSize
+mat4 modelMatrix
+mat4 viewMatrix
+mat4 perspectiveMatrix
+mat4 textureMatrix
+sampler2D sampler0
+sampler2D sampler1

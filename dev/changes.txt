@@ -1,0 +1,4 @@
+Mar 12 2022 6:14 - Cleaned Up Css Files
+Mar 12 2022 6:14 - Made Secrets Their Own Css File
+Mar 12 2022 6:14 - Added Anchor Animations
+Mar 12 2022 6:14 - Changed Projects Panel On Home Screen To Gadgets

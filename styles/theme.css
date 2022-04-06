@@ -34,6 +34,10 @@
   text-align: center;
 }
 
+/*----------------*/
+/*-    Cards     -*/
+/*----------------*/
+
 /*card centering*/
 .card {
   text-align: center;
@@ -41,25 +45,31 @@
   padding: 3%;
 }
 
+/* Card Info Class */
+.card-info{
+  margin: auto auto;
+  display: inline-block;
+  text-align: left  !important;
+  line-height: 1.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+/* Card Title Class */
+.card-title {
+  text-align: center !important;
+  width: 100%;
+}
+
+/*----------------*/
+/*-    Video     -*/
+/*----------------*/
+
 /* video container */
 .vidya-con {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
-}
-
-#pass {
-  text-align:center;
-  color: white;
-  padding-bottom: 2vh;
-  padding-top: 2vh;
-  font-size: 2vw;
-  line-height: 1.1;
-  width:40%;
-  position: relative;
-  display: inline-flex;
-  box-shadow: none;
-  
 }
 
 /* video attributres */
@@ -75,6 +85,7 @@
 /*-     Hero     -*/
 /*----------------*/
 
+/* Hero Class */
 .hero {
   text-align:center;
   height: 50%;
@@ -83,6 +94,8 @@
   position: relative;
   display: inline-block;
 }
+
+/* Hero text */
 .hero-text {
   color: white;
   padding-bottom: 2vh;
@@ -91,28 +104,37 @@
   line-height: 1.1;
 }
 
+/* Hero Splash Text */
 .hero-splash {
   font-size: 2vw;
   padding-bottom: 2vh;
 }
 
-.card-info{
-  margin: auto auto;
-  display: inline-block;
-  
-  text-align: left  !important;
-  line-height: 1.5vw;
+/*----------------*/
+/*-     Links    -*/
+/*----------------*/
 
-  float: left;
-
-  padding-left: 1vw;
-  padding-right: 1vw;
-  
-
+/* anchor selector */
+a {
+  transition: background-color 0.3s ease-out;
 }
 
-.card-title {
-  text-align: center !important;
+/* anchor hover */
+a:hover {
+  background-color: #fff !important;
+}
+.lists ul{
   width: 100%;
 }
+.lists ul li{
 
+  width: auto;
+  text-align: left;
+}
+
+.title-text {
+  font-size: 2vw;
+  text-align: center;
+  position: relative;
+  display: block;
+}

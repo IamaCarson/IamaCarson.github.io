@@ -1,0 +1,28 @@
+Credit - Pull https://www.twitch.tv/pullthatlevel
+
+Sorry to interrupt but how to make background bouncing?
+Not exactly sure what you mean with bouncing (up and down? Pulsing to the beat?) but this is how you do stuff with the background
+HOW DO I DO STUFF WITH THE BACKGROUND (on the Mirin template)
+
+First, place the background in the lua folder, then you need to declare the background as an actor before all the proxy declarations (inside layout.xml if you're using version 5.0)
+><children>
+  <Layer File = "bg.png" Name = "bg" />
+
+  <!-- and then all the PC/PP/PJ declarations -->
+</children></Mods>
+
+This is so it shows behind everything else, now if you run it you'll see the background on the top left corner, to fix it do a little bit of setup on the "here go your mods" part:
+-- your code goes here here:
+bg:xywh(scx, scy, sw, sh) --Place at the center, stretch to the screen size
+
+And now you have a static background with the nice thing that you can modify it mid modfile! For example try out adding func {2, function() bg:rainbow() end}
+
+To make it pulse to the beat, like in Caramelldansen for example, there are several ways to do it, the easiest way is something like this:
+--New mod that changes the background zoom
+definemod {'bgzoom', function(x) bg:zoom(x) end}
+setdefault {'bgzoom', 1}
+
+--Now, every beat, pop its zoom up and down by 20%, causing it to pulse!
+for i = 1, 128 do
+  ease {i, 0.5, pop, 1.2, 'bgzoom'}
+end
