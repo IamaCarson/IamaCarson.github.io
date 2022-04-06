@@ -50,9 +50,20 @@ const splashList = [ '\"2!\"',
   '\"Is This a Loss refrence?\"',
   ];
   
-  //splash function
-  function splash() {
-      document.getElementById('hero-splash-id').innerText = splashList[Math.floor(Math.random()*splashList.length)];
+  
+  const isToday = (someDate) => {
+    const today = new Date()
+    return someDate.getDate() == today.getDate() &&
+      someDate.getMonth() == today.getMonth()
   }
+
+  //splash function
+function splash() {
+    if(isToday(new Date(0,2,29))){
+      document.getElementById('hero-splash-id').innerText = "Happy Birthday Taronuke!";
+    } else {
+    document.getElementById('hero-splash-id').innerText = splashList[Math.floor(Math.random()*splashList.length)];
+    }
+}
   
   window.onload = splash; //load splash
