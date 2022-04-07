@@ -115,9 +115,6 @@
 /*----------------*/
 
 /* anchor selector */
-a {
-  transition: background-color 0.3s ease-out;
-}
 
 /* anchor hover */
 
@@ -128,8 +125,6 @@ a {
 
   width: auto;
   text-align: left;
-}.lists a{
-  transition: none !important;
 }
 
 
