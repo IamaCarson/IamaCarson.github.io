@@ -120,9 +120,7 @@ a {
 }
 
 /* anchor hover */
-a:hover {
-  background-color: #fff !important;
-}
+
 .lists ul{
   width: 100%;
 }
@@ -130,11 +128,13 @@ a:hover {
 
   width: auto;
   text-align: left;
+}.lists a{
+  transition: none !important;
 }
+
 
 .title-text {
   font-size: 2vw;
   text-align: center;
-  position: relative;
   display: block;
 }
