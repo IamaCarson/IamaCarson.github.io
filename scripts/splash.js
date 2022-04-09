@@ -48,6 +48,15 @@ const splashList = [ '\"2!\"',
   '\"Marco\"',
   '\"Polo\"',
   '\"Is This a Loss refrence?\"',
+  '\"Life is Soup and I am fork\"',
+  '\"he thought\"',
+  '\"chicago craigslist\"',
+  '\"Ohio will be eliminated\"',
+  '\"hotcheeto\"',
+  '\"How many of deez do i have?\"',
+  '\"<3\"',
+  '\"i own beans\"',
+  '\"Meet Without Feet\"'
   ];
   
   
