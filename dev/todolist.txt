@@ -2,6 +2,9 @@ To DO List
 
 [x] Splash Screen
 [x] NotItg Projects
-[] Stocks Sim
-[] Coin Flip Sim
-[] Random Project Button with secrets
+[x] new noel
+[x] Coin Flip Sim
+[x] Random Project Button with secrets
+[x] Dancing Cat Title Screen | 4/9/2022 7:27pm|
+[] Add notitg resources link to every pages
+[] Changelog

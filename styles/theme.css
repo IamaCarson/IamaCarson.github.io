@@ -44,7 +44,10 @@
   margin: 2% auto;
   padding: 3%;
 }
-
+.card2 {
+  text-align: center;
+  padding: 3%;
+}
 /* Card Info Class */
 .card-info{
   margin: auto auto;
@@ -129,7 +132,25 @@
 
 
 .title-text {
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
   display: block;
+}
+
+.buddy{
+  display:inline-block;
+  position:absolute;
+  bottom:0;
+  right: 5%;
+  overflow: visible;
+  height: fit-content;
+  width: auto;
+  max-width: 15%;
+  max-height: max-content;
+}
+
+@media only screen and (orientation: portrait) {
+  body {
+    background-color: lightblue;
+  }
 }

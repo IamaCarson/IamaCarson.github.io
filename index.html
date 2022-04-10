@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/home.css" />
         <link rel="stylesheet" href="styles/theme.css" />
         <link rel="stylesheet" href="styles/secrets.css" />
+        
         <title>Carson's Gadgets</title>
     </head>
     <body>
@@ -20,16 +21,33 @@
             </div>
             <div class="hero-text">Welcome to<br><span id="arrow" onclick="remember()">&#xab</span> <span id="cee" onclick="fall()">C</span>arson's Gadgets <span id="arrow2" onclick="remember2()">&#xbb</span></div>
             <div class="hero-splash w3-text-white" id="hero-splash-id" onclick="splash()">"Quote Here"</div>
+            <img class="buddy" src="dev/dancing_cat.gif">
         </div>
-        <div class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
+        <div class="w3-quarter">
+            <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2 w3-center" style="width:90%; position: relative;">
+                <h1 class="w3-center lists">News</h1>
+                <hr>
+                <ul style="float:left;">
+                    <li>4/9/2022 - New Update! <a href="dev/changelog.html">[check]</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="w3-threequarter" style="left:0;">
+        <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2  w3-center" style="width:66.666%">
             <h1 class="w3-center">Take a look at my Gadgets!</h1>
             <a href="pages/projects/index.html" class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple">Gadgets</a>
         </div>
-        <div class="w3-panel w3-text-white w3-theme-d2 w3-card video-card card w3-center" style="width:50%">
+        <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2 w3-center" style="width:66.666%">
+            <h1 class="w3-center">Take me to a random Gadget!</h1>
+            <a id="random" onclick="randomGadget()" class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple">?</a>
+        </div>
+        <div class="w3-panel w3-text-white w3-theme-d2 w3-card video-card card2 w3-center" style="width:66.666%">
             <h1 class="w3-center">Featured Project</h1>
             <div class="vidya-con">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/PvZJ72BlM1M" title="YouTube video player" style="object-fit: cover;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="vidya" allowfullscreen></iframe>
             </div>
         </div>
+    </div>
     </body>
 </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <!-- Coin flip -->
+  <head>
+    <!-- View Port for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="../../../../styles/theme.css">
+    <!-- Name -->
+    <title>Coinflip</title>
+  </head>
+  <body>
+
+    <!-- Navigation class -->
+    <div class="nav">
+      <!-- Home Button -->
+      <a class="nav" href="../../../index.html">Home</a>
+      <!-- Gadget List -->
+      <a class="nav" href="../../gadgets/gadgetlist.html">Gadgets</a>
+      <!-- About -->
+      <a class="nav" href="../../../about/index.html">About</a>
+      <!-- What -->
+      <a class="nav" href="../../../what/what.html">???</a>
+    </div>
+
+    <!-- header -->
+    <div class="top">
+    <!-- Title -->
+    <h1 id="titel">Coinflip</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h3 class="cstats" id="hstreak"></h3>
+        <h3 class="cstats" id="hstreakp"></h3>
+        <h3 class="cstats" id="streak"></h3>
+        <h2 class="cstats" id="total"></h2>
+        <h3 class="cstats" id="heads"></h3>
+        <h3 class="cstats" id="tails"></h3>
+        <hr>
+        <h2 class="question">What Is This?</h2>
+        <p1 class="answer">Ahhh probability. This program flips a coin every<br>
+            1 millisecond. If you flip the same face multiple times in a row <br>
+            you'll get a streak and the longer it runs the higher chance you get <br>
+            to get a high streak. It will also show the percent chance to get your <br>
+            highest streak. To get 100 in a row would be 1 in 2^100 chance! <br>
+        </p1>
+    </div>
+  
+
+  </body>
+  <script>
+      let streak = 0;
+      let hstreak = 0;
+      let heads = 0;
+      let tails = 0;
+      let total = 0;
+      let lastcoin = 0;
+    window.onload = function() {            
+     function flip() {
+         coin = Math.floor(Math.random()*2);
+         //0 heads
+         //1 tails
+         total++;
+         if(lastcoin == coin){
+             streak++;
+         } else {
+            streak = 0;
+         }
+         if(streak >= hstreak){
+             hstreak = streak;
+         }
+         if(coin == 0){
+            heads++;
+         } else if (coin == 1){
+             tails++;
+         }
+         lastcoin = coin;
+         document.getElementById('total').innerText = `total: ${total}`;
+         document.getElementById('hstreak').innerText = `Highest Streak: ${hstreak}`;
+         document.getElementById('hstreakp').innerText = `Highest Streak Chance: ${1/2 ** hstreak * 100}%`;
+         document.getElementById('streak').innerText = `Streak: ${streak}`;
+         document.getElementById('heads').innerText = `heads: ${heads}`;
+         document.getElementById('tails').innerText = `tails: ${tails}`
+         
+     }
+     setInterval(flip, 1);
+ }
+  </script>
+</html>
