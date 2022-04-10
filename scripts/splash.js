@@ -73,6 +73,8 @@ function splash() {
     } else {
     document.getElementById('hero-splash-id').innerText = splashList[Math.floor(Math.random()*splashList.length)];
     }
+    document.getElementById('hero-splash-id').classList.add("splashs")
 }
   
   window.onload = splash; //load splash
+

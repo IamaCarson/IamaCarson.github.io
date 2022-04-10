@@ -6,5 +6,5 @@ To DO List
 [x] Coin Flip Sim
 [x] Random Project Button with secrets
 [x] Dancing Cat Title Screen | 4/9/2022 7:27pm|
-[] Add notitg resources link to every pages
+[x] Add notitg resources link to every pages
 [] Changelog

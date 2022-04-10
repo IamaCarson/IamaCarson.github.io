@@ -97,6 +97,13 @@
   position: relative;
   display: inline-block;
 }
+@keyframes splashs {
+  0% {
+      transform: scale(0);
+  } 100% {
+    transform: scale(1);
+  }
+}
 
 /* Hero text */
 .hero-text {
@@ -105,12 +112,14 @@
   padding-top: 2vh;
   font-size: 5vw;
   line-height: 1.1;
+  animation: splashs 2.0s forwards;
 }
 
 /* Hero Splash Text */
 .hero-splash {
   font-size: 2vw;
   padding-bottom: 2vh;
+
 }
 
 /*----------------*/
