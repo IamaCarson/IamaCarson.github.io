@@ -38,7 +38,15 @@ function remember2() { //trigger opacity animation
 
 function submitPass(){
   if(document.getElementById('pass').value == "beans"){
- document.getElementById('pass').value = "aaa";
+    document.getElementById('passText').innerText = "aaa";
+  } else if(document.getElementById('pass').value == "???"){
+    document.getElementById('passText').innerText = "!!!";
+  } else if(document.getElementById('pass').value == "!!!"){
+    document.getElementById('passText').innerText = "---";
+  } else if(document.getElementById('pass').value == "---"){
+    document.getElementById('passText').innerText = "+++";
+  } else if(document.getElementById('pass').value == "+++"){
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   }
 }
 let r3 = -1;
@@ -86,4 +94,15 @@ function rain() {
     document.getElementById('rain2').classList.remove("rainOn")
   }
 }
+function bruh(){
+  var audio = new Audio('dev/bruh.mp3');
+  audio.play();
+}
+function a() {
+  if(Math.floor(Math.random()*69) == 1) {
+    bruh()
+  }
+  setTimeout(() => {a()}, Math.floor(Math.random()*20000));
+}
 
+window.onload = a; //load splash

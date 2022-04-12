@@ -66,8 +66,10 @@ const splashList = [ '\"2!\"',
     return someDate.getDate() == today.getDate() &&
       someDate.getMonth() == today.getMonth()
   }
+
   //splash function
 function splash() {
+
     if(isToday(new Date(0,2,29))){
       document.getElementById('hero-splash-id').innerText = "Happy Birthday Taronuke!";
     } else {
