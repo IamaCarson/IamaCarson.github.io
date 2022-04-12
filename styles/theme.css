@@ -156,6 +156,21 @@
   width: auto;
   width: 15%;
 }
+@keyframes heart {
+  0%   {opacity: 1;}
+  100% {opacity: 0; transform: translateY(-70%);}
+}
+.buddyheart{
+  display:inline-block;
+  position:absolute;
+  bottom:60%;
+  right: 10%;
+  overflow: visible;
+  height: fit-content;
+  width: auto;
+  width: 4%;
+  animation: heart 1.0s forwards;
+}
 .ukraine {
   display:inline-block;
   width: 4%;

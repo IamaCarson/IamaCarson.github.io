@@ -1,3 +1,11 @@
+function heart() {
+    var img = document.createElement('img');
+    img.src = 
+'dev/heart.png';
+    img.classList.add('buddyheart')
+document.getElementById('header1').appendChild(img);
+
+} 
 function point(){
     if (parseInt(localStorage.getItem('counter'))){
     c = localStorage.getItem('counter')
@@ -7,5 +15,6 @@ function point(){
     } else {
         localStorage.setItem('counter', 1)
     }
+    heart()
 }
 //window.onload = function(){localStorage.removeItem('counter')};
