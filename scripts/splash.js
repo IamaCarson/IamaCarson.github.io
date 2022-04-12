@@ -56,7 +56,8 @@ const splashList = [ '\"2!\"',
   '\"How many of deez do i have?\"',
   '\"<3\"',
   '\"i own beans\"',
-  '\"Meet Without Feet\"'
+  '\"Meet Without Feet\"',
+  '\"\u0D9E\"'
   ];
   
   
@@ -65,7 +66,6 @@ const splashList = [ '\"2!\"',
     return someDate.getDate() == today.getDate() &&
       someDate.getMonth() == today.getMonth()
   }
-
   //splash function
 function splash() {
     if(isToday(new Date(0,2,29))){
