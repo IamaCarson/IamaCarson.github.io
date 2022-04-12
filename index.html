@@ -4,6 +4,7 @@
         <script src="scripts/splash.js"></script>
         <script src="scripts/secrets.js"></script>
         <script src="scripts/random.js"></script>
+        <script src="scripts/clicker.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="styles/home.css" />
         <link rel="stylesheet" href="styles/theme.css" />
@@ -21,14 +22,16 @@
             </div>
             <div class="hero-text">Welcome to<br><span id="arrow" onclick="remember()">&#xab</span> <span id="cee" onclick="fall()">C</span>arson's Gadgets <span id="arrow2" onclick="remember2()">&#xbb</span></div>
             <div class="hero-splash w3-text-white" id="hero-splash-id" style="transform: scale(0);" onclick="splash()">"Quote Here"</div>
-            <img class="buddy" src="dev/dancing_cat.gif">
+            <img class="buddy" onclick="point()" src="dev/dancing_cat.gif">
+            <div class="buddy" id="counter"></div>
+            <img class="ukraine" src="dev/heart.png"><!-- Stand With Ukraine! -->
         </div>
         <div class="w3-quarter">
             <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2 w3-center" style="width:90%; position: relative;">
                 <h1 class="w3-center lists">News</h1>
                 <hr>
                 <ul style="float:left;">
-                    <li>4/9/2022 - New Update! <a href="dev/changelog.html">[check]</a></li>
+                    <li>4/12/2022 - New Update! <a href="dev/changelog.html">[check]</a></li>
                 </ul>
                 
             </div>

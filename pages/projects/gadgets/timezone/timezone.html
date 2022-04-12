@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="w3-theme-d3">
+    <head>
+        <script src="scripts/secrets.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="../../../../styles/home.css" />
+        <link rel="stylesheet" href="../../../../styles/theme.css" />
+        <title>Carson's Gadgets - Coinflip</title> <!-- Page title-->
+    </head>
+    <body>
+        <div class="hero w3-theme-d4">
+            <div class="w3-bar w3-theme-d5">
+                <a href="../../../../index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
+                <a href="../../../../pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
+                <a href="../../../../pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
+            </div>
+            <div class="hero-text">&#xab Timezone &#xbb</div>
+        </div>
+
+        <div class="content w3-center">
+            <div class="w3-panel">
+                <div class="tzName">Jousway</div>
+                <div class="tztime" id="b"></div>
+            </div>
+        </div>
+      
+    
+      </body>
+      <script>
+          
+          function calcTime(target) {
+                // create Date object for current location
+                var d = new Date();
+
+                // convert to msec
+                // subtract local time zone offset
+                // get UTC time in msec
+                var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+                // create new Date object for different city
+                // using supplied offset
+                var nd = new Date(utc + (3600000*target.timezone));
+
+                // return time as a string
+                target.time = nd.toLocaleString();
+          }  
+          let jous = {
+              name: "jousway",
+              timezone: 2
+          }
+        setInterval(function(){
+            calcTime(jous)
+            document.getElementById("b").innerText = jous.time
+        }, 1000);
+      </script>
+    
+</html>

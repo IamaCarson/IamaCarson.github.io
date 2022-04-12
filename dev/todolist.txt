@@ -7,4 +7,9 @@ To DO List
 [x] Random Project Button with secrets
 [x] Dancing Cat Title Screen | 4/9/2022 7:27pm|
 [x] Add notitg resources link to every pages
-[] Changelog
+[x] Changelog
+
+[x] ukraine flag
+[] check what time it is for your friends
+[] Secret Rickroll
+[] Pet Counter
