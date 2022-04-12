@@ -6,6 +6,10 @@ function heart() {
 document.getElementById('header1').appendChild(img);
 
 } 
+function bruh(){
+    var audio = new Audio('dev/fart.mp3');
+    audio.play();
+  }
 function point(){
     if (parseInt(localStorage.getItem('counter'))){
     c = localStorage.getItem('counter')
@@ -16,5 +20,8 @@ function point(){
         localStorage.setItem('counter', 1)
     }
     heart()
-}
+    if(Math.floor(Math.random()*100) == 1) {
+        bruh()
+      }
+    }
 //window.onload = function(){localStorage.removeItem('counter')};
