@@ -166,8 +166,7 @@
   bottom:60%;
   right: 10%;
   overflow: visible;
-  height: fit-content;
-  width: auto;
+
   width: 4%;
   animation: heart 1.0s forwards;
 }
