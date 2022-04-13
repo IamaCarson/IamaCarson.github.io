@@ -99,7 +99,8 @@ function bruh(){
   audio.play();
 }
 function a() {
-  if(Math.floor(Math.random()*69) == 1) {
+
+  if(Math.floor(Math.random()*1500) == 1) {
     bruh()
   }
   setTimeout(() => {a()}, Math.floor(Math.random()*20000));
