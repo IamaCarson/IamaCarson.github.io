@@ -6,7 +6,7 @@ function heart() {
 document.getElementById('header1').appendChild(img);
 
 } 
-function bruh(){
+function fart(){
     var audio = new Audio('dev/fart.mp3');
     audio.play();
   }
@@ -20,8 +20,8 @@ function point(){
         localStorage.setItem('counter', 1)
     }
     heart()
-    if(Math.floor(Math.random()*100) == 1) {
-        bruh()
+    if(Math.floor(Math.random()*3000) == 1) {
+        fart()
       }
     }
 //window.onload = function(){localStorage.removeItem('counter')};
