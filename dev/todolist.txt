@@ -8,8 +8,9 @@ To DO List
 [x] Dancing Cat Title Screen | 4/9/2022 7:27pm|
 [x] Add notitg resources link to every pages
 [x] Changelog
-
 [x] ukraine flag
+[x] Secret Rickroll
+[x] Pet Counter
+
 [] check what time it is for your friends
-[] Secret Rickroll
-[] Pet Counter
+[] Home - 4
