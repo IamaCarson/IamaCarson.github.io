@@ -158,15 +158,14 @@
 }
 @keyframes heart {
   0%   {opacity: 1;}
-  100% {opacity: 0; transform: translateY(-70%);}
+  100% {opacity: 0;}
 }
 .buddyheart{
   display:inline-block;
   position:absolute;
-  bottom:60%;
+  bottom:30%;
   right: 10%;
   overflow: visible;
-
   width: 4%;
   animation: heart 1.0s forwards;
 }

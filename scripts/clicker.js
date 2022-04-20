@@ -1,9 +1,15 @@
+const hearts = ['dev/hearts/heart.png',
+'dev/hearts/heart1.png']
+
 function heart() {
     var img = document.createElement('img');
-    img.src = 
-'dev/heart.png';
+    img.src = hearts[Math.floor(Math.random()*hearts.length)];
     img.classList.add('buddyheart')
-document.getElementById('header1').appendChild(img);
+    img.style.transform = `translate(${Math.random()*250-250/2}%, ${Math.random()*300-300/2}%)`
+    
+    var img2 = document.getElementById('header1').appendChild(img);
+    
+    setTimeout(() => {img2.remove();}, 1000);
 
 } 
 function fart(){
