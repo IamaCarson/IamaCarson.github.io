@@ -20,6 +20,15 @@
             <div class="hero-text">Changelog</div>
         </div>
         <div  class="w3-panel w3-text-white w3-theme-d2 w3-card card lists w3-mobile" style="width:50%; font-size: 1vw;">
+            <div class="title-text">420</div>
+            <hr>
+            <div class="w3-theme-d4 w3-panel card w3-mobile w3-text-white" style="width: 70%; font-size:1.5vw">
+                <ul style="float:left;">
+                    <li>420</li>
+                </ul>
+            </div>
+        </div>
+        <div  class="w3-panel w3-text-white w3-theme-d2 w3-card card lists w3-mobile" style="width:50%; font-size: 1vw;">
             <div class="title-text">4/18/2022</div>
             <hr>
             <div class="w3-theme-d4 w3-panel card w3-mobile w3-text-white" style="width: 70%; font-size:1.5vw">
@@ -60,4 +69,25 @@
             </div>
         </div>
     </body>
+    <script>
+        const isToday2 = (someDate) => {
+          const today = new Date()
+          return someDate.getDate() == today.getDate() &&
+            someDate.getMonth() == today.getMonth()
+        }
+              var theme = 1
+              var link = document.createElement("link");
+              link.type = "text/css";
+              link.rel = "stylesheet";
+              if(isToday2(new Date(0,3,20))){
+                  console.log('test')
+                link.href = "../styles/theme3.css";
+              }else if (theme == 1) {
+                link.href = "../styles/theme1.css";
+              } else if (theme == 2) {
+                link.href = "../styles/theme2.css";
+              }
+              
+              document.head.appendChild(link);
+            </script>
 </html>

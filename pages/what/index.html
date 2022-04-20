@@ -24,4 +24,26 @@
         </div>
         </article>
     </body>
+    <script>
+        const isToday2 = (someDate) => {
+          const today = new Date()
+          return someDate.getDate() == today.getDate() &&
+            someDate.getMonth() == today.getMonth()
+        }
+      
+              var theme = 1
+              var link = document.createElement("link");
+              link.type = "text/css";
+              link.rel = "stylesheet";
+              if(isToday2(new Date(0,3,20))){
+                  console.log('test')
+                link.href = "../../styles/theme3.css";
+              }else if (theme == 1) {
+                link.href = "../../styles/theme1.css";
+              } else if (theme == 2) {
+                link.href = "../../styles/theme2.css";
+              }
+              
+              document.head.appendChild(link);
+            </script>
 </html>

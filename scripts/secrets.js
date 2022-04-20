@@ -98,12 +98,12 @@ function bruh(){
   var audio = new Audio('dev/bruh.mp3');
   audio.play();
 }
-function a() {
+function bruhCheck() {
 
   if(Math.floor(Math.random()*1500) == 1) {
     bruh()
   }
-  setTimeout(() => {a()}, Math.floor(Math.random()*20000));
+  setTimeout(() => {bruhCheck()}, Math.floor(Math.random()*20000));
 }
 
-window.onload = a; //load splash
+window.onload = setTimeout(() => {bruhCheck()}, Math.floor(Math.random()*20000)); //load splash
