@@ -1,7 +1,7 @@
 function randomPage(){
   pages = [
   'index.html',
-  'school/ecology/energy-brochure/index.html',
+  'school/ecology/energy brochure/index.html',
   'pages/projects/index.html', 
   'pages/notitg/index.html',
   'pages/projects/index.html',
