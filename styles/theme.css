@@ -173,10 +173,10 @@
   display:inline-block;
   width: 4%;
   
-  bottom:0;
+  bottom:auto;
   right: 47%;
   left: 48%;
-  overflow: visible;
+  overflow:hidden;
 }
 
 @media only screen and (orientation: portrait) {

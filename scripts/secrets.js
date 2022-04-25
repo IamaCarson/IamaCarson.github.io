@@ -94,6 +94,13 @@ function rain() {
     document.getElementById('rain2').classList.remove("rainOn")
   }
 }
+
+function ukraine(){
+
+    document.getElementById('ukraine').classList.add("jump")
+    setTimeout(() => {document.getElementById('ukraine').classList.remove("jump");}, 1000);
+
+}
 function bruh(){
   var audio = new Audio('dev/bruh.mp3');
   audio.play();
@@ -107,3 +114,4 @@ function bruhCheck() {
 }
 
 window.onload = setTimeout(() => {bruhCheck()}, Math.floor(Math.random()*20000)); //load splash
+
