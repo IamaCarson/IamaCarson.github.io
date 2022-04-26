@@ -57,7 +57,47 @@ const splashList = [ '\"2!\"',
   '\"<3\"',
   '\"i own beans\"',
   '\"Meet Without Feet\"',
-  '\"\u0D9E\"'
+  '\"\u0D9E\"',
+  '\"Lego Starwars\"',
+  '\"Smile!\"',
+  '\"What\'s a splash screen?\"',
+  '\"Shout out to HeySora\"',
+  '\"Grocery\"',
+  '\"Jpeg\"',
+  '\"8ball\"',
+  '\"Flying Butter\"',
+  '\"?\"',
+  '\"Sussy\"',
+  '\"Meat Without Feet\"',
+  '\"Can I order a number 2 combo with a large sprite\"',
+  '\"Not in color\"',
+  '\"Why?\"',
+  '\"A Crisis!\"',
+  '\"1 Fish.\"',
+  '\"Lazy Daisy\"',
+  '\"What year is it?\"',
+  '\"Dayum Daniel\"',
+  '\"-_-\"',
+  '\"How many of these do i have?\"',
+  '\"Made With Insanity\"',
+  '\"Help Im Stuck in the splash quote! AHHHHHHHH\"',
+  '\"No Escape!\"',
+  '\"sink\"',
+  '\"sync\"',
+  '\"arsons gadgets\"',
+  '\"Pet The Cat\"',
+  '\"Secrets!\"',
+  '\"STEVE\"',
+  '\"Maxx Force\"',
+  '\"Cedar Point\"',
+  '\"DDRILLINI\"',
+  '\"RIP12\"',
+  '\"Mods\"',
+  '\"Minceraft\"',
+  '\"Im tired of writing these splashes\"',
+  '\"The Show must go on!\"',
+  '\"Wordle\"',
+  '\"100th Quote!\"'
   ];
   
   
@@ -77,6 +117,8 @@ function splash() {
     }
     document.getElementById('hero-splash-id').classList.add("splashs")
 }
+
+
   
-  window.onload = splash; //load splash
+
 

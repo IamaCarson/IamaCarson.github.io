@@ -20,18 +20,18 @@
                 <a href="pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
                 <a onclick="randomPage()" class="w3-bar-item w3-button w3-mobile w3-text-white" style="float: right;">Random</a>
             </div>
-            <div class="hero-text">Welcome to<br><span id="arrow" onclick="remember()">&#xab</span> <span id="cee" onclick="fall()">C</span>arson's Gadgets <span id="arrow2" onclick="remember2()">&#xbb</span></div>
-            <div class="hero-splash w3-text-white" id="hero-splash-id" style="transform: scale(0);" onclick="splash()">"Quote Here"</div>
+            <div class="hero-text">Welcome to<br><span id="arrow" onclick="remember()">&#xab</span> <span id="cee" onclick="fall()" onload="ccheck()">C</span>arson's Gadgets <span id="arrow2" onclick="remember2()">&#xbb</span></div>
+            <div class="hero-splash w3-text-white" id="hero-splash-id" style="transform: scale(0);" onclick="splash()" onload="splash()">"Quote Here"</div>
             <img class="buddy" id="cat" onclick="point()" src="dev/dancing_cat.gif">
             <div class="buddy" id="counter"></div>
-            <img class="ukraine" src="dev/hearts/heart.png"><!-- Stand With Ukraine! -->
+            <img class="ukraine" id="ukraine" src="dev/hearts/heart.png" onclick="ukraine()"><!-- Stand With Ukraine! -->
         </div>
         <div class="w3-quarter" id="lalallala">
             <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2 w3-center" style="width:90%; position: relative;">
                 <h1 class="w3-center lists">News</h1>
                 <hr>
                 <ul style="float:left;">
-                    <li>4/21/2022 - Bugfixes and more! <a href="dev/changelog.html">[check]</a></li>
+                    <li>4/26/2022 - New Project! <a href="dev/changelog.html">[check]</a></li>
                     <li>Submit a Feature Request! <a href="https://forms.gle/tnjQb4DjKW9HDuWX8">[check]</a></li>
                 </ul>
         
@@ -73,7 +73,13 @@
         } else if (theme == 2) {
           link.href = "styles/theme2.css";
         }
-        
+        function ccheck(){
+            if(Math.floor(Math.random()*1)==2222){
+                document.getElementById('cee').innerText = "\u2183"
+                         }
+}
         document.head.appendChild(link);
+        window.onload = function(){ccheck();splash(); } //load splash
+        
       </script>
 </html>

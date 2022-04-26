@@ -3,7 +3,12 @@ const hearts = ['dev/hearts/heart.png',
 'dev/hearts/heart2.png',
 'dev/hearts/heart3.png',
 'dev/hearts/heart4.png',
-'dev/hearts/heart5.png']
+'dev/hearts/heart5.png',
+'dev/hearts/heart6.png',
+'dev/hearts/heart7.png',
+'dev/hearts/heart8.png',
+'dev/hearts/heart9.png',
+'dev/hearts/heart10.png']
 
 function heart() {
     var img = document.createElement('img');
