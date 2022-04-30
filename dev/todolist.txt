@@ -13,4 +13,4 @@ To DO List
 [x] Pet Counter
 
 [] check what time it is for your friends
-[] Home - 4
+[x] Home - 4
