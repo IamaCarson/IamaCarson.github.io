@@ -11,6 +11,15 @@ To DO List
 [x] ukraine flag
 [x] Secret Rickroll
 [x] Pet Counter
-
-[] check what time it is for your friends
+[x] check what time it is for your friends
 [x] Home - 4
+[x] Dancing Cat
+[x] Art Hall 1
+
+
+[] Add 10+ Splashes
+[] NotItg Docs
+[] About Me
+[] Minecraft Gadgets
+[] Add 5+ hearts
+[] Art Hall 2
