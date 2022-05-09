@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html class="w3-theme-d3">
-    <head>
-        <script src="scripts/splash.js"></script>
-        <script src="scripts/secrets.js"></script>
-        <script src="scripts/random.js"></script>
-        <script src="scripts/clicker.js"></script>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="styles/home.css" />
-        <link rel="stylesheet" href="styles/theme.css" />
-        <link rel="stylesheet" href="styles/secrets.css" />
-        
-        <title>Carson's Gadgets</title>
-    </head>
-    <body>
-        <div class="hero w3-theme-d4" id="header1">
-            <div class="w3-bar w3-theme-d5">
-                <a href="#" class="nav-button w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
-                <a href="pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
-                <a href="pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
-                <a href="pages/projects/gadgets/timezone/timezone.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Timezones</a>
-                <a href="pages/arthall/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Arthall</a>
-                <a onclick="randomPage()" class="w3-bar-item w3-button w3-mobile w3-text-white" style="float: right;">Random</a>
-            </div>
-            <div class="hero-text">Welcome to<br><span id="arrow" onclick="remember()">&#xab</span> <span id="cee" onclick="fall()" onload="ccheck()">C</span>arson's Gadgets <span id="arrow2" onclick="remember2()">&#xbb</span></div>
-            <div class="hero-splash w3-text-white" id="hero-splash-id" style="transform: scale(0);" onclick="splash()" onload="splash()">"Quote Here"</div>
-            <img class="buddy" id="cat" onclick="point()" src="dev/dancing_cat.gif">
-            <div class="buddy" id="counter"></div>
-            <img class="ukraine" id="ukraine" src="dev/hearts/heart.png" onclick="ukraine()"><!-- Stand With Ukraine! -->
+
+<head>
+    <script src="scripts/splash.js"></script>
+    <script src="scripts/secrets.js"></script>
+    <script src="scripts/random.js"></script>
+    <script src="scripts/clicker.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/secrets.css" />
+
+    <title>Carson's Gadgets</title>
+</head>
+
+<body>
+    <div class="hero w3-theme-d4" id="header1">
+        <div class="w3-bar w3-theme-d5">
+            <a href="#" class="nav-button w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
+            <a href="pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
+            <a href="pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
+            <a href="pages/projects/gadgets/timezone/timezone.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Timezones</a>
+            <a href="pages/arthall/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Arthall</a>
+            <a onclick="randomPage()" class="w3-bar-item w3-button w3-mobile w3-text-white" style="float: right;">Random</a>
         </div>
-        <div class="w3-quarter" id="lalallala">
-            <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2 w3-center" style="width:90%; position: relative;">
-                <h1 class="w3-center lists">News</h1>
-                <hr>
-                <ul style="float:left;">
-                    <li>5/2/2022 - Art! <a href="dev/changelog.html">[check]</a></li>
-                    <li>Submit a Feature Request! <a href="https://forms.gle/tnjQb4DjKW9HDuWX8">[check]</a></li>
-                </ul>
-        
-            </div>
+        <div class="hero-text">Welcome to<br><span id="arrow" onclick="remember()">&#xab</span> <span id="cee" onclick="fall()" onload="ccheck()">C</span>arson's Gadgets <span id="arrow2" onclick="remember2()">&#xbb</span></div>
+        <div class="hero-splash w3-text-white" id="hero-splash-id" style="transform: scale(0);" onclick="splash()" onload="splash()">"Quote Here"</div>
+        <img class="buddy" id="cat" onclick="point()" src="dev/dancing_cat.gif">
+        <div class="buddy" id="counter"></div>
+        <img class="ukraine" id="ukraine" src="dev/hearts/heart.png" onclick="ukraine()">
+        <!-- Stand With Ukraine! -->
+    </div>
+    <div class="w3-quarter" id="lalallala">
+        <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2 w3-center" style="width:90%; position: relative;">
+            <h1 class="w3-center lists">News</h1>
+            <hr>
+            <ul style="float:left;">
+                <li>5/2/2022 - Art! <a href="dev/changelog.html">[check]</a></li>
+                <li>Submit a Feature Request! <a href="https://forms.gle/tnjQb4DjKW9HDuWX8">[check]</a></li>
+            </ul>
+
         </div>
-        <div class="w3-threequarter" style="left:0;">
+    </div>
+    <div class="w3-threequarter" style="left:0;">
         <div class="w3-panel w3-text-white w3-theme-d2 w3-card card2  w3-center" style="width:66.666%">
             <h1 class="w3-center">Take a look at my Gadgets!</h1>
             <a href="pages/projects/index.html" class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple">Gadgets</a>
@@ -51,37 +54,44 @@
         <div class="w3-panel w3-text-white w3-theme-d2 w3-card video-card card2 w3-center" style="width:66.666%">
             <h1 class="w3-center">Featured Project</h1>
             <div class="vidya-con">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/-78shUpSaz0" title="YouTube video player" style="object-fit: cover;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="vidya" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZB1FBjk_U0w" title="YouTube video player" style="object-fit: cover;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="vidya"
+                    allowfullscreen></iframe>
             </div>
+            <br>
+            <a href="pages/projects/modcharts/index.html#projSignal" target="_blank" class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple"> Launch</a>
         </div>
     </div>
-    </body>
-    <script>
-  const isToday2 = (someDate) => {
-    const today = new Date()
-    return someDate.getDate() == today.getDate() &&
-      someDate.getMonth() == today.getMonth()
-  }
+</body>
+<script>
+    const isToday2 = (someDate) => {
+        const today = new Date()
+        return someDate.getDate() == today.getDate() &&
+            someDate.getMonth() == today.getMonth()
+    }
 
-        var theme = 1
-        var link = document.createElement("link");
-        link.type = "text/css";
-        link.rel = "stylesheet";
-        if(isToday2(new Date(0,3,20))){
-            console.log('test')
-          link.href = "styles/theme3.css";
-        }else if (theme == 1) {
-          link.href = "styles/theme1.css";
-        } else if (theme == 2) {
-          link.href = "styles/theme2.css";
+    var theme = 1
+    var link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    if (isToday2(new Date(0, 3, 20))) {
+        console.log('test')
+        link.href = "styles/theme3.css";
+    } else if (theme == 1) {
+        link.href = "styles/theme1.css";
+    } else if (theme == 2) {
+        link.href = "styles/theme2.css";
+    }
+
+    function ccheck() {
+        if (Math.floor(Math.random() * 1) == 2222) {
+            document.getElementById('cee').innerText = "\u2183"
         }
-        function ccheck(){
-            if(Math.floor(Math.random()*1)==2222){
-                document.getElementById('cee').innerText = "\u2183"
-                         }
-}
-        document.head.appendChild(link);
-        window.onload = function(){ccheck();splash(); } //load splash
-        
-      </script>
+    }
+    document.head.appendChild(link);
+    window.onload = function() {
+            ccheck();
+            splash();
+        } //load splash
+</script>
+
 </html>
