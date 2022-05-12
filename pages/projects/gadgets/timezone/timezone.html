@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../../../../styles/home.css" />
     <link rel="stylesheet" href="../../../../styles/theme.css" />
+    <script src="../../../../scripts/libraries/moment.js"></script>
+    <script src="../../../../scripts/libraries/moment-timezone-with-data.js"></script>
     <title>Carson's Gadgets - Coinflip</title>
     <!-- Page title-->
 </head>
@@ -23,98 +25,139 @@
     </div>
 
     <div class="content w3-center" id="content">
-        <div class="tzInput tzPanel w3-panel w3-center w3-card card2 w3-theme-d2" >
-        <div>GMT OFFSET</div>
-        <input type="number" id="offset" name="offset">
-        <div>Name</div>
-        <input type="text" id="names" name="names">
-        <input type="submit" onclick="createFriend(parseInt(document.getElementById('offset').value ), document.getElementById('names').value) " >
+        <a class="w3-bar-item w3-button w3-red 
+        w3-mobile w3-text-white" onclick="nuke()" style="margin:1vw;">Nuke Data</a>
+        <div class="tzInput tzPanel w3-panel w3-center w3-card card2 w3-theme-d2">
+
+            <div>Timezone</div>
+            <select name="cars" id="cars">
+
+            </select>
+            <div>Name</div>
+            <input type="text" id="names" name="names">
+            <input type="submit" onclick="createFriend(document.getElementById('cars').options[ document.getElementById('cars').selectedIndex ].value , document.getElementById('names').value) ">
         </div>
+
     </div>
 
 
 </body>
 <script>
     //localStorage.removeItem('timezones');
+    function nuke() {
+        if (confirm("Are you sure you want to delete all local storage for your timezones? (Will delete all timezone data but fix any corrupted or unupdated panels)") == true) {
+
+            const butts = document.querySelectorAll('.butt');
+            butts.forEach(butt => {
+                butt.click();
+            });
+            localStorage.removeItem('timezones');
+            var names = [];
+            names[0] = "America/Chicago,Carson";
+            localStorage.timezones = JSON.stringify(names);
+            const cards = document.querySelectorAll('.tzCard');
+            cards.forEach(card => {
+                card.remove();
+            });
+            location.reload()
+        }
+
+    }
+
+    for (let i = 0; i < moment.tz.names().length; i++) {
+        var o = document.createElement("option");
+        o.value = moment.tz.names()[i]
+        o.text = moment.tz.names()[i]
+        document.getElementById('cars').appendChild(o);
+
+    }
+
+
     console.log(localStorage.timezones)
-    if (localStorage.timezones == null || JSON.parse(localStorage.timezones) == 0){
+    if (localStorage.timezones == null || JSON.parse(localStorage.timezones) == 0) {
         var names = [];
-        names[0] = "-5,carson";
+        names[0] = "America/Chicago,Carson";
         localStorage.timezones = JSON.stringify(names);
         //console.log(localStorage.timezones)
     }
+
     function calcTime(target) {
         // create Date object for current location
-        var d = new Date();
+        console.log()
+        var d = moment.tz(target)
 
         // convert to msec
         // subtract local time zone offset
         // get UTC time in msec
-        var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
 
         // create new Date object for different city
         // using supplied offset
-        var nd = new Date(utc + (3600000 * target));
+        var days = d.format('DD/MM/YYYY')
+        var hours = d.format('hh:mm a')
 
         // return time as a string
-        return nd.toLocaleString();
+        return days.toLocaleString() + ',' + hours.toLocaleString();
     }
 
     function createFriend(target, name) {
-       c = JSON.parse(localStorage.timezones);
+        if (name != "" & name != null) {
 
-       console.log(c)
-       if (!c.includes(`${target},${name}`)){
-        c.push(`${target},${name}`)
-        localStorage.timezones = JSON.stringify(c);
-       // console.log(c)
+
+            c = JSON.parse(localStorage.timezones);
+
+            console.log(c)
+            if (!c.includes(`${target},${name}`)) {
+                c.push(`${target},${name}`)
+                localStorage.timezones = JSON.stringify(c);
+                // console.log(c)
+            }
+            var div = document.createElement('div');
+            var nameText = document.createElement('div');
+            var timeText = document.createElement('div');
+            var timeText2 = document.createElement('div');
+            var deleteb = document.createElement('button');
+            div.classList = ('w3-panel tzPanel w3-text-white w3-theme-d2 w3-card card2 tzCard')
+            div.style.display = "inline-block"
+            div.id = name
+            nameText.classList = ('tzName w3-theme-d1 card2')
+            nameText.innerText = name
+            timeText.classList = ('tzTime w3-theme-d1 card2 time')
+            timeText.innerText = calcTime(target).substr(0, calcTime(target).indexOf(','));
+            timeText2.classList = ('tzTime w3-theme-d1 card2 time2');
+            timeText2.innerText = calcTime(target).substr(calcTime(target).indexOf(',') + 1);
+            deleteb.innerText = "X";
+            deleteb.classList = ('butt w3-button w3-theme-d3 tzPanel ')
+            div.appendChild(nameText)
+            div.appendChild(document.createElement('br'))
+            div.appendChild(timeText2)
+            div.appendChild(document.createElement('br'))
+            div.appendChild(timeText)
+            div.appendChild(deleteb)
+            document.getElementById('content').appendChild(div);
+            let r = setInterval(function() {
+                document.querySelector('#' + name).querySelector('.time').innerText = calcTime(target).substr(0, calcTime(target).indexOf(','));
+                document.querySelector('#' + name).querySelector('.time2').innerText = calcTime(target).substr(calcTime(target).indexOf(',') + 1);
+            }, 1000);
+            document.querySelector('#' + name).querySelector('.butt').onclick = function() {
+                let c = JSON.parse(localStorage.timezones);
+                c.splice(c.indexOf(`${target},${name}`), 1)
+                console.log(c)
+
+                localStorage.timezones = JSON.stringify(c);
+
+                document.querySelector('#' + name).remove();
+                clearInterval(r);
+            }
         }
-        var div = document.createElement('div');
-        var nameText = document.createElement('div');
-        var timeText = document.createElement('div');
-        var timeText2 = document.createElement('div');
-        var deleteb = document.createElement('button');
-        div.classList = ('w3-panel tzPanel w3-text-white w3-theme-d2 w3-card card2 ')
-        div.style.display = "inline-block"
-        div.id = name
-        nameText.classList = ('tzName w3-theme-d1 card2')
-        nameText.innerText = name
-        timeText.classList = ('tzTime w3-theme-d1 card2 time')
-        timeText.innerText = calcTime(target).substr(0, calcTime(target).indexOf(','));
-        timeText2.classList = ('tzTime w3-theme-d1 card2 time2');
-        timeText2.innerText = calcTime(target).substr(calcTime(target).indexOf(',') + 1);
-        deleteb.innerText = "X";
-        deleteb.classList =  ('butt w3-button w3-theme-d3 tzPanel ')
-        div.appendChild(nameText)
-        div.appendChild(document.createElement('br'))
-        div.appendChild(timeText2)
-        div.appendChild(document.createElement('br'))
-        div.appendChild(timeText)
-        div.appendChild(deleteb)
-        document.getElementById('content').appendChild(div);
-        let r = setInterval(function() {
-            document.querySelector('#' + name).querySelector('.time').innerText = calcTime(target).substr(0, calcTime(target).indexOf(','));
-            document.querySelector('#' + name).querySelector('.time2').innerText = calcTime(target).substr(calcTime(target).indexOf(',') + 1);
-        }, 1000);
-        document.querySelector('#' + name).querySelector('.butt').onclick = function(){ 
-          let c = JSON.parse(localStorage.timezones);
-        c.splice(c.indexOf(`${target},${name}`),1 )
-        console.log(c)
-       
-        localStorage.timezones = JSON.stringify(c);
-        
-            document.querySelector('#' + name).remove();
-             clearInterval(r); 
-      }
+
     }
-
-
-//...
-c = JSON.parse(localStorage.timezones);
-//console.log(c[0].substr(c[0].indexOf(',')+1))
-for (i = 0; i < c.length; i++){
-   createFriend(parseInt(c[i].substr(0, c[i].indexOf(','))),c[i].substr(c[i].indexOf(',')+1))
-}
+    //...
+    c = JSON.parse(localStorage.timezones);
+    //console.log(c[0].substr(c[0].indexOf(',')+1))
+    for (i = 0; i < c.length; i++) {
+        createFriend(c[i].substr(0, c[i].indexOf(',')), c[i].substr(c[i].indexOf(',') + 1))
+    }
 </script>
 
 </html>
