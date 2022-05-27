@@ -15,8 +15,8 @@ To DO List
 [x] Home - 4
 [x] Dancing Cat
 [x] Art Hall 1
+[x] Timezones Library
 
-[] Timezones Library
 [] Oc Ref Sheets
 [] Coding Ideas
 [] To do list task manager
