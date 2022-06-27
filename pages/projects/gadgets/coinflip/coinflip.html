@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 <html class="w3-theme-d3">
-    <head>
-        <script src="scripts/secrets.js"></script>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../../../../styles/home.css" />
-        <link rel="stylesheet" href="../../../../styles/theme.css" />
-        <title>Carson's Gadgets - Coinflip</title> <!-- Page title-->
-    </head>
-    <body>
-        <div class="hero w3-theme-d4">
-            <div class="w3-bar w3-theme-d5">
-                <a href="../../../../index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
-                <a href="../../../../pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
-                <a href="../../../../pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
-            </div>
-            <div class="hero-text">&#xab Coinflip &#xbb</div>
-        </div>
 
-        <div class="content w3-center">
-            <h3 class="cstats" id="hstreak"></h3>
-            <h3 class="cstats" id="hstreakp"></h3>
-            <h3 class="cstats" id="streak"></h3>
-            <h2 class="cstats" id="total"></h2>
-            <h3 class="cstats" id="heads"></h3>
-            <h3 class="cstats" id="tails"></h3>
-            <hr>
-            <h2 class="question">What Is This?</h2>
-            <p1 class="answer">Ahhh probability. This program flips a coin every<br>
-                1 millisecond. If you flip the same face multiple times in a row <br>
-                you'll get a streak and the longer it runs the higher chance you get <br>
-                to get a high streak. It will also show the percent chance to get your <br>
-                highest streak. To get 100 in a row would be 1 in 2^100 chance! <br>
-            </p1>
+<head>
+    <script src="scripts/secrets.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../../../../styles/home.css" />
+    <link rel="stylesheet" href="../../../../styles/theme.css" />
+    <title>Carson's Gadgets - Coinflip</title>
+    <!-- Page title-->
+</head>
+
+<body>
+    <div class="hero w3-theme-d4">
+        <div class="w3-bar w3-theme-d5">
+            <a href="../../../../index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
+            <a href="../../../../pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
+            <a href="../../../../pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
+            <a href="../../../../pages/projects/gadgets/timezone/timezone.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Timezones</a>
+            <a href="../../../../pages/arthall/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Arthall</a>
         </div>
-      
-    
-      </body>
-      <script>
-          let streak = 0;
-          let hstreak = 0;
-          let heads = 0;
-          let tails = 0;
-          let total = 0;
-          let lastcoin = 0;
-        window.onload = function() {            
-         function flip() {
-             coin = Math.floor(Math.random()*2);
-             //0 heads
-             //1 tails
-             total++;
-             if(lastcoin == coin){
-                 streak++;
-             } else {
+        <div class="hero-text">&#xab Coinflip &#xbb</div>
+    </div>
+
+    <div class="content w3-center">
+        <h3 class="cstats" id="hstreak"></h3>
+        <h3 class="cstats" id="hstreakp"></h3>
+        <h3 class="cstats" id="streak"></h3>
+        <h2 class="cstats" id="total"></h2>
+        <h3 class="cstats" id="heads"></h3>
+        <h3 class="cstats" id="tails"></h3>
+        <hr>
+        <h2 class="question">What Is This?</h2>
+        <p1 class="answer">Ahhh probability. This program flips a coin every<br> 1 millisecond. If you flip the same face multiple times in a row <br> you'll get a streak and the longer it runs the higher chance you get <br> to get a high streak. It will also show the percent
+            chance to get your <br> highest streak. To get 100 in a row would be 1 in 2^100 chance! <br>
+        </p1>
+    </div>
+
+
+</body>
+<script>
+    let streak = 0;
+    let hstreak = 0;
+    let heads = 0;
+    let tails = 0;
+    let total = 0;
+    let lastcoin = 0;
+    window.onload = function() {
+        function flip() {
+            coin = Math.floor(Math.random() * 2);
+            //0 heads
+            //1 tails
+            total++;
+            if (lastcoin == coin) {
+                streak++;
+            } else {
                 streak = 0;
-             }
-             if(streak >= hstreak){
-                 hstreak = streak;
-             }
-             if(coin == 0){
+            }
+            if (streak >= hstreak) {
+                hstreak = streak;
+            }
+            if (coin == 0) {
                 heads++;
-             } else if (coin == 1){
-                 tails++;
-             }
-             lastcoin = coin;
-             document.getElementById('total').innerText = `total: ${total}`;
-             document.getElementById('hstreak').innerText = `Highest Streak: ${hstreak}`;
-             document.getElementById('hstreakp').innerText = `Highest Streak Chance: ${1/2 ** hstreak * 100}%`;
-             document.getElementById('streak').innerText = `Streak: ${streak}`;
-             document.getElementById('heads').innerText = `heads: ${heads}`;
-             document.getElementById('tails').innerText = `tails: ${tails}`
-             
-         }
-         setInterval(flip, 1);
-     }
-      </script>
-    
+            } else if (coin == 1) {
+                tails++;
+            }
+            lastcoin = coin;
+            document.getElementById('total').innerText = `total: ${total}`;
+            document.getElementById('hstreak').innerText = `Highest Streak: ${hstreak}`;
+            document.getElementById('hstreakp').innerText = `Highest Streak Chance: ${1/2 ** hstreak * 100}%`;
+            document.getElementById('streak').innerText = `Streak: ${streak}`;
+            document.getElementById('heads').innerText = `heads: ${heads}`;
+            document.getElementById('tails').innerText = `tails: ${tails}`
+
+        }
+        setInterval(flip, 1);
+    }
+</script>
+
 </html>

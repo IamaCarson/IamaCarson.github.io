@@ -314,21 +314,39 @@
     font-size: 1vw;
     padding: 1vw;
 }
-.tzPanel{
-    margin:1vw;
+
+.tzPanel {
+    margin: 1vw;
 }
-.tzInput{
-    width:40%; margin:0 auto; display:block;
+
+.tzInput {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
 }
+
 @media only screen and (orientation: portrait) {
     .tzName {
         font-size: 10vw;
     }
-    .tzTime{
-        font-size:8vw;
+    .tzTime {
+        font-size: 8vw;
     }
-    .tzInput{
-        font-size:3vw;
-        width:80%; margin:0 auto; display:block;
+    .tzInput {
+        font-size: 3vw;
+        width: 80%;
+        margin: 0 auto;
+        display: block;
     }
+}
+
+.p5Canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    text-align: center;
 }

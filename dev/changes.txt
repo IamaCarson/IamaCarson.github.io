@@ -8,3 +8,6 @@ April 9 2022 6:45pm - added random project button
 April 9 2022 7:08pm - added animation to random gadget buttonn
 April 9 2022 7:21pm - added index buddy
 April 10 2022 7:32pm - fixed notitg resources links
+
+June 9 2022 - Added Slots
+June 9 2022 - Added Terrain Gen

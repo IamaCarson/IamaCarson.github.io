@@ -16,13 +16,38 @@ To DO List
 [x] Dancing Cat
 [x] Art Hall 1
 [x] Timezones Library
+[x] NotItg Docs
+[x] Setup p5js
+[x] make links setup on all pages
+[x] Slot Machine
+[x] Random Terrain Generator
+[x] Pad Tester 1
 
-[] Oc Ref Sheets
-[] Coding Ideas
-[] To do list task manager
-[] Add 10+ Splashes
-[] NotItg Docs
-[] About Me
-[] Minecraft Gadgets
-[] Add 5+ hearts
-[] Art Hall 2
+1. [] Loot Box
+2. [] Would You Rather
+3. [] Achivements
+4. [] Bullet Hell Test
+5. [] Clock
+6. [] Interactive pad on homescreen
+7. [] 10 secrets a page
+8. [] backgrounds
+9. [] template index
+10. [] Oc Ref Sheets
+11. [] Coding Ideas
+12. [] To do list task manager
+13. [] turtle Race
+14. [] Add 10+ Splashes
+15. [] About Me
+16. [] Minecraft Gadgets
+17. [] Add 5+ hearts
+18. [] Art Hall 2
+19. [] Random Weather Chart
+20. [] Panorama Drive
+21. [] Raycasting
+22. [] Maze Generator
+23. [] Madlibs
+24. [] Stock Sim
+25. [] Text Based adventure game
+26. [] Cat Clicker game
+27. [] Basic Tile Based Puzzle game
+28. [] Pad Tester 2

@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html class="w3-theme-d3">
-    <head>
-        <script src="scripts/secrets.js"></script>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../../styles/home.css" />
-        <link rel="stylesheet" href="../../styles/theme.css" />
-        <link rel="stylesheet" href="../../styles/secrets.css" />
-        <title>Carson's Gadgets - Art Hall</title> <!-- Page title-->
-    </head>
-    
-    <body>
-        <div class="hero w3-theme-d4">
-            <div class="w3-bar w3-theme-d5">
-                <a href="../../index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
-                <a href="../../pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
-                <a href="../../pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
-            </div>
-            <div class="hero-text">&#xab Art &#xbb</div>
-        </div>
-        
-        <div class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
-            <h1 class="w3-center">Ocs</h1>
-        </div>
 
-        <div id="dancingcatArt" class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
-          <img class=" w3-panel  w3-image w3-card card card2 w3-center" src="../../images/art/Ocs/dancing Cat/pfp.png"  />
-         <br>
-          <div style="display:block;  " class="w3-mobile ">
+<head>
+    <script src="scripts/secrets.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="../../styles/theme.css" />
+    <link rel="stylesheet" href="../../styles/secrets.css" />
+    <title>Carson's Gadgets - Art Hall</title>
+    <!-- Page title-->
+</head>
+
+<body>
+    <div class="hero w3-theme-d4">
+        <div class="w3-bar w3-theme-d5">
+            <a href="../../index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Carson's Gadgets</a>
+            <a href="../../pages/projects/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Gadgets</a>
+            <a href="../../pages/notitg/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">NotITG Resources</a>
+            <a href="../../pages/projects/gadgets/timezone/timezone.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Timezones</a>
+            <a href="../../pages/arthall/index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Arthall</a>
+        </div>
+        <div class="hero-text">&#xab Art &#xbb</div>
+    </div>
+
+    <div class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
+        <h1 class="w3-center">Ocs</h1>
+    </div>
+
+    <div id="dancingcatArt" class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
+        <img class=" w3-panel  w3-image w3-card card card2 w3-center" src="../../images/art/Ocs/dancing Cat/pfp.png" />
+        <br>
+        <div style="display:block;  " class="w3-mobile ">
             <hr class="w3-rest w3-mobile" width="100%">
             <h3 class="card-desc">Dancing Cat</h3>
             <hr class="w3-rest w3-mobile" width="100%">
-            <a href="dancingcat.html"  class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple" >See Art</a>
-          </div>
+            <a href="dancingcat.html" class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple">See Art</a>
         </div>
+    </div>
 
-        <div id="spookyArt" class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
-          <img class=" w3-panel  w3-image w3-card card card2 w3-center" src="../../images/art/Ocs/Spooky/SpookyMonth.png" width="50%" />
-         <br>
-          <div style="display:block;  " class="w3-mobile ">
+    <div id="spookyArt" class="w3-panel w3-text-white w3-theme-d2 w3-card card w3-center" style="width:50%">
+        <img class=" w3-panel  w3-image w3-card card card2 w3-center" src="../../images/art/Ocs/Spooky/SpookyMonth.png" width="50%" />
+        <br>
+        <div style="display:block;  " class="w3-mobile ">
             <hr class="w3-rest w3-mobile" width="100%">
             <h3 class="card-desc">Spooky</h3>
             <hr class="w3-rest w3-mobile" width="100%">
-            <a href="spooky.html"  class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple" >See Art</a>
-          </div>
+            <a href="spooky.html" class="w3-center w3-bar-item w3-button w3-mobile w3-text-white w3-purple">See Art</a>
         </div>
-    </body>
-    <script>
-      const isToday2 = (someDate) => {
+    </div>
+</body>
+<script>
+    const isToday2 = (someDate) => {
         const today = new Date()
         return someDate.getDate() == today.getDate() &&
-          someDate.getMonth() == today.getMonth()
-      }
-    
-            var theme = 1
-            var link = document.createElement("link");
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            if(isToday2(new Date(0,3,20))){
-                console.log('test')
-              link.href = "../../styles/theme3.css";
-            }else if (theme == 1) {
-              link.href = "../../styles/theme1.css";
-            } else if (theme == 2) {
-              link.href = "../../styles/theme2.css";
-            }
-            
-            document.head.appendChild(link);
-          </script>
+            someDate.getMonth() == today.getMonth()
+    }
+
+    var theme = 1
+    var link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    if (isToday2(new Date(0, 3, 20))) {
+        console.log('test')
+        link.href = "../../styles/theme3.css";
+    } else if (theme == 1) {
+        link.href = "../../styles/theme1.css";
+    } else if (theme == 2) {
+        link.href = "../../styles/theme2.css";
+    }
+
+    document.head.appendChild(link);
+</script>
+
 </html>
